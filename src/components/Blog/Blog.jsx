@@ -1,28 +1,46 @@
-import { useEffect } from "react";
-import { useState } from "react"
+import { useEffect, useState } from "react";
 import Blogs from "../Blogs/Blogs";
 
+function Blog({ handleBookMark}) {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-function Blog() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      fetch("./blogs.json")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setBlogs(data.blogPosts);
+          setLoading(false);
+        })
+        .catch((error) => {
+          setError(error.message);
+          setLoading(false);
+        });
+    }, 500); // Simulate a loading delay of 200ms
 
-    const [blogs,setBlogs]=useState([]);
-    useEffect(()=>{
-        fetch("./blogs.json")
-        .then(res => res.json())
-        .then(data => setBlogs(data.blogPosts))
-    },[])
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }, []);
 
-    console.log(blogs)
   return (
-
-    <div className="w-2/3">
-      <h1>{blogs.length}</h1>
-   {
-    blogs.map((blogs,index) => (<Blogs blogs={blogs} key={index} />))
-   }
-
+    <div className="md:w-2/3 mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
+      
+      {loading && <p className="text-gray-500">Loading...</p>}
+      {error && <p className="text-red-500">Error: {error}</p>}
+      {blogs.length === 0 && !loading && <p className="text-gray-500">No blog posts available.</p>}
+      
+      {blogs.map((blog, index) => (
+        <Blogs blogs={blog} handleBookMark={handleBookMark} key={index} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
