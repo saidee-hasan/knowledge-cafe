@@ -1,10 +1,11 @@
 
 function BookMarks() {
   return (
-    <div>
-      
+    <div className="md:w-1/3">
+
+      BookMarks
     </div>
   )
 }
 
-export default BookMarks
+export default BookMarks;

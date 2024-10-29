@@ -6,13 +6,13 @@ function App() {
  
 
   return (
-    <>
+    <div className="">
      <Header/>
-     <div className="md:flex">
+     <div className="md:flex  w-11/12 mx-auto">
      <Blog/>
      <BookMarks/>
      </div>
-    </>
+    </div>
   )
 }
 
