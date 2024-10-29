@@ -11,17 +11,19 @@ function App() {
   const newBookMarks = [...bookMarks,blogs]
  setBookMarks(newBookMarks)
  }
- const handleMarkAsRed = (time)=>{
+ const handleMarkAsRed = (time,id)=>{
   setReadingTime(readingTime + time)
 
- }
+
+}
+
   return (
     <div className="">
      <Header/>
      <div className=" md:flex   md:w-11/12 mx-auto">
-     <Blog handleBookMark={handleBookMark} handleMarkAsRed={handleMarkAsRed}  />
+     <Blog handleBookMark={handleBookMark} readingTime={readingTime}  handleMarkAsRed={handleMarkAsRed}  />
     
-     <BookMarks readingTime={readingTime}  bookMarks={bookMarks}/></div>
+     <BookMarks  readingTime={readingTime}  bookMarks={bookMarks}/></div>
 
      <footer className="mt-8 p-4 bg-gray-200 text-center">
 

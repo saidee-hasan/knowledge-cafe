@@ -6,7 +6,7 @@
       {
         "id": 1,
         "title": "Understanding React Hooks",
-        "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
+        "coverImage": "https://i.ibb.co.com/8Y2dcMK/2.png",
         "author": {
           "name": "Jane Doe",
           "profileImage": "https://example.com/images/jane-doe.jpg"
@@ -18,7 +18,7 @@
       {
         "id": 2,
         "title": "A Guide to Tailwind CSS",
-        "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
+        "coverImage": "https://i.ibb.co.com/pWNdnXj/4.jpg",
         "author": {
           "name": "John Smith",
           "profileImage": "https://example.com/images/john-smith.jpg"
@@ -29,6 +29,18 @@
       },
       {
         "id": 3,
+        "title": "Getting Started with Node.js",
+        "coverImage": "https://i.ibb.co.com/3SN6dch/3.png",
+        "author": {
+          "name": "Alice Johnson",
+          "profileImage": "https://example.com/images/alice-johnson.jpg"
+        },
+        "postedDate": "2023-08-20T14:00:00Z",
+        "readingTime": 10,
+        "content": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser..."
+      },
+      {
+        "id": 4,
         "title": "Getting Started with Node.js",
         "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
         "author": {

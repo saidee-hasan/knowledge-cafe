@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import BookMark from "../BookMark/BookMark";
 
-function BookMarks({ bookMarks, readingTime }) {
+function BookMarks({ bookMarks, readingTime,handleDelete }) {
   console.log(bookMarks);
 
   return (
@@ -14,7 +14,7 @@ function BookMarks({ bookMarks, readingTime }) {
         <p className="text-gray-500">No bookmarks available.</p>
       ) : (
         bookMarks.map((bookMark, index) => (
-          <BookMark key={index} bookMark={bookMark} />
+          <BookMark key={index} handleDelete={handleDelete}  bookMark={bookMark} />
         ))
       )}
     </div>
