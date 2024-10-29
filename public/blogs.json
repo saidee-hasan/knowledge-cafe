@@ -1,9 +1,12 @@
+
+
+
 {
     "blogPosts": [
       {
         "id": 1,
         "title": "Understanding React Hooks",
-        "coverImage": "https://example.com/images/react-hooks.jpg",
+        "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
         "author": {
           "name": "Jane Doe",
           "profileImage": "https://example.com/images/jane-doe.jpg"
@@ -15,7 +18,7 @@
       {
         "id": 2,
         "title": "A Guide to Tailwind CSS",
-        "coverImage": "https://example.com/images/tailwind-css.jpg",
+        "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
         "author": {
           "name": "John Smith",
           "profileImage": "https://example.com/images/john-smith.jpg"
@@ -27,7 +30,7 @@
       {
         "id": 3,
         "title": "Getting Started with Node.js",
-        "coverImage": "https://example.com/images/nodejs.jpg",
+        "coverImage": "https://i.ibb.co.com/tsnVLvy/1.jpg",
         "author": {
           "name": "Alice Johnson",
           "profileImage": "https://example.com/images/alice-johnson.jpg"
