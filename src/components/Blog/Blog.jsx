@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Blogs from "../Blogs/Blogs";
 
-function Blog({ handleBookMark}) {
+function Blog({ handleBookMark,handleMarkAsRed}) {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -37,7 +37,7 @@ function Blog({ handleBookMark}) {
       {blogs.length === 0 && !loading && <p className="text-gray-500">No blog posts available.</p>}
       
       {blogs.map((blog, index) => (
-        <Blogs blogs={blog} handleBookMark={handleBookMark} key={index} />
+        <Blogs blogs={blog} handleBookMark={handleBookMark} handleMarkAsRed={handleMarkAsRed} key={index} />
       ))}
     </div>
   );

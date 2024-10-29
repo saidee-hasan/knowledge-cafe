@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Boy from "../../assets/boy2.png";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
-function Blogs({ blogs , handleBookMark}) {
+function Blogs({ blogs , handleBookMark,handleMarkAsRed}) {
   const { title, coverImage, author, postedDate, readingTime } = blogs;
 
   // State to manage if the blog is bookmarked
@@ -16,7 +16,7 @@ function Blogs({ blogs , handleBookMark}) {
 
   return (
     <div className="border border-gray-300 p-4 rounded-md shadow-lg ">
-      <img className="w-full h-64 object-cover rounded-md" src={coverImage} alt={title} />
+      <img className="w-full h-96 object-cover rounded-md" src={coverImage} alt={title} />
       <div className="flex justify-between mt-2">
         <div className="flex items-center">
           <img className="w-12 h-12 rounded-full" src={Boy} alt={author.name} />
@@ -42,6 +42,7 @@ function Blogs({ blogs , handleBookMark}) {
 
       <h2 className="text-xl font-bold mt-4">{title}</h2>
       <p className="text-gray-700 mt-2">{title}</p>
+      <a href="">Markis Red</a>
     </div>
   );
 }
