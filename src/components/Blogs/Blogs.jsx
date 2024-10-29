@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Boy from "../../assets/boy2.png";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
-function Blogs({ blogs , handleBookMark,handleMarkAsRed}) {
+function Blogs({ blogs, handleBookMark, handleMarkAsRed }) {
   const { title, coverImage, author, postedDate, readingTime } = blogs;
 
   // State to manage if the blog is bookmarked
@@ -12,6 +12,7 @@ function Blogs({ blogs , handleBookMark,handleMarkAsRed}) {
   // Toggle bookmark state
   const handleBookmarkToggle = () => {
     setIsBookmarked(!isBookmarked);
+    handleBookMark(blogs); // Call the handleBookMark function when toggling
   };
 
   return (
@@ -28,27 +29,34 @@ function Blogs({ blogs , handleBookMark,handleMarkAsRed}) {
         <div className="flex items-center">
           <p className="text-gray-600 text-sm">{readingTime} min read</p>
           <button
-         
             className={`ml-2 p-1 rounded-full transition-colors duration-300 ${
-              isBookmarked ? "text-blue-500" : "text-gray-500"
+              isBookmarked ? "text-red-500" : "text-gray-500"
             }`}
-            onClick={handleBookmarkToggle ,  ()=>handleBookMark(blogs)}
+            onClick={handleBookmarkToggle}
             aria-label={isBookmarked ? "Remove bookmark" : "Add bookmark"}
           >
-            {isBookmarked ? <FaBookmark /> : <FaRegBookmark />}
+            {isBookmarked ? (
+              <FaBookmark className="text-red-500" /> // Change color to red when bookmarked
+            ) : (
+              <FaRegBookmark className="text-gray-500" />
+            )}
           </button>
         </div>
       </div>
 
       <h2 className="text-xl font-bold mt-4">{title}</h2>
       <p className="text-gray-700 mt-2">{title}</p>
-      <a href="">Markis Red</a>
+      <button onClick={() => handleMarkAsRed(readingTime)} className="text-green-500 underline">
+        Mark As Read
+      </button>
     </div>
   );
 }
 
 Blogs.propTypes = {
   blogs: PropTypes.object.isRequired,
+  handleBookMark: PropTypes.func.isRequired,
+  handleMarkAsRed: PropTypes.func.isRequired,
 };
 
 export default Blogs;

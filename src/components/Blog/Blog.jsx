@@ -29,7 +29,7 @@ function Blog({ handleBookMark,handleMarkAsRed}) {
   }, []);
 
   return (
-    <div className="md:w-2/3 mx-auto p-4">
+    <div className="md:w-2/3 mx-auto p-4 md:mt-20">
       <h1 className="text-2xl font-bold mb-4">Blog Posts</h1>
       
       {loading && <p className="text-gray-500">Loading...</p>}

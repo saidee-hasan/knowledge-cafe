@@ -10,7 +10,8 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-between items-center w-11/12 mx-auto border-b-2 py-4">
+    <div className="w-full  fixed mt-0">
+    <div className="flex  z-40  bg-white justify-between items-center w-11/12 mx-auto  border-b-2 py-4">
       <h1 className="text-xl md:text-3xl font-bold text-blue-600">Knowledge Cafe</h1>
       
       <div className="flex items-center space-x-4">
@@ -40,7 +41,7 @@ function Header() {
        
         </div>
       </div>
-    </div>
+    </div></div>
   );
 }
 
