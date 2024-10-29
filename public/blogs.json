@@ -1,0 +1,40 @@
+{
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "Understanding React Hooks",
+        "coverImage": "https://example.com/images/react-hooks.jpg",
+        "author": {
+          "name": "Jane Doe",
+          "profileImage": "https://example.com/images/jane-doe.jpg"
+        },
+        "postedDate": "2023-10-01T12:00:00Z",
+        "readingTime": 7,
+        "content": "In this article, we will explore the various hooks available in React and how they can simplify your component logic..."
+      },
+      {
+        "id": 2,
+        "title": "A Guide to Tailwind CSS",
+        "coverImage": "https://example.com/images/tailwind-css.jpg",
+        "author": {
+          "name": "John Smith",
+          "profileImage": "https://example.com/images/john-smith.jpg"
+        },
+        "postedDate": "2023-09-15T10:00:00Z",
+        "readingTime": 5,
+        "content": "Tailwind CSS is a utility-first CSS framework that can be used to build custom designs without having to leave your HTML..."
+      },
+      {
+        "id": 3,
+        "title": "Getting Started with Node.js",
+        "coverImage": "https://example.com/images/nodejs.jpg",
+        "author": {
+          "name": "Alice Johnson",
+          "profileImage": "https://example.com/images/alice-johnson.jpg"
+        },
+        "postedDate": "2023-08-20T14:00:00Z",
+        "readingTime": 10,
+        "content": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser..."
+      }
+    ]
+  }
