@@ -4,7 +4,7 @@
 
 
 
-- [@vitejs/plugin-react](knowledge-cafe-rose.vercel.app) 
+- [Live Link](knowledge-cafe-rose.vercel.app) 
 
 
 ![Alt text](./src/assets//knowdlege.png)
