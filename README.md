@@ -1,9 +1,10 @@
-# React + Vite
+# knowledge-cafe-rose
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##### The Knowledge Café Rose blog serves as a platform for sharing experiences and insights related to Knowledge Cafés, promoting a culture of open dialogue and learning. It emphasizes the importance of understanding diverse perspectives and the role of curiosity in effective communication.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# knowledge-cafe
+
+- [@vitejs/plugin-react](knowledge-cafe-rose.vercel.app) 
+
+
+![Alt text](./src/assets//knowdlege.png)
